@@ -10,6 +10,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "1.5.2",
     "bootstrap": "^4.2.1",
+    "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "live-server": "^1.2.0",
     "moment": "^2.26.0",
@@ -51,6 +52,8 @@
     "webpack-dev-server": "^2.5.1"
   },
   "scripts": {
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod",
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
