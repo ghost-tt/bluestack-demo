@@ -1,0 +1,57 @@
+.ReactModalPortal>div {
+    opacity: 0;
+  }
+  
+  .ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity 200ms ease-in-out;
+  }
+  
+  .ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+  
+  .ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+  
+
+.popup {
+    color:#202741;
+    background: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+    padding: $l-size;
+}
+
+.popup_title {
+    margin: 2rem auto;
+    font-size: 2rem;
+}
+
+.popup_question_title {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+}
+
+
+.popup_button {
+    background: #202741;
+    border: none;
+    border-bottom: 1px solid #202741;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 500;
+    padding: $m-size;
+    margin: 1rem 2rem;
+  }
+  
+//   .button--link {
+//     background: none;
+//     border: none;
+//     color: $off-white;
+//     padding: 0;
+//   }
+  

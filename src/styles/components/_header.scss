@@ -1,0 +1,54 @@
+.header {
+  background: $off-black;
+  color: white;
+  margin-bottom: $m-size;
+  padding: 2rem 0;
+}
+
+// .header .container {
+//   display: flex;
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  flex-basis: 50%;
+  align-self: center !important;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 50%;
+  align-self: center !important;
+}
+
+// .header .container .right .alignRight {
+//   float: right;
+// }
+
+
+.bs_logo {
+  height: 40px;
+}
+
+.header__title {
+  font-size: $l-size;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: $off-white;
+  font-size: $m-size;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .header {
+    margin-bottom: $xl-size;
+  }
+}

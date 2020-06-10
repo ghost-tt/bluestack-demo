@@ -1,0 +1,5 @@
+{
+  "welcomeMessage": "Welcome, %{name}.",
+  "notification": "You have %{smart_count} message. |||| You have %{smart_count} messages.",
+  "title": "Manage Campaigns"
+}
