@@ -5,7 +5,6 @@ import axios from 'axios'
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-// import 'bootstrap/dist/css/bootstrap.css'
 
 import LocaleContext from './contexts/locale'
 import Message from './components/message'
