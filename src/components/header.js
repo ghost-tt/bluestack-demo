@@ -9,7 +9,9 @@ const Header = (props) => {
       <div className="header">
         <div className="container flex">
           <div className="left">
-            <img src="https://cdn-www.bluestacks.com/bs-images/bs-logo-new.png" className="bs_logo"/>
+            <a href="https://www.bluestacks.com/" target="_blank">
+             <img src="https://cdn-www.bluestacks.com/bs-images/bs-logo-new.png" className="bs_logo"/>
+            </a>
           </div>
           <div className="right">
             <select onChange={e => setLocale(e.target.value)} className="alignRight">
