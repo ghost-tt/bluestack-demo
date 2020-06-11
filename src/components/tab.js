@@ -25,7 +25,7 @@ class Tab extends React.Component {
                   {
                     "name": "Super Jewels Quest",
                     "region": "CA, FR",
-                    "createdOn": 159246944400,
+                    "createdOn": 1592383044000,
                     "price": [80, 300, 800],
                     "csv": "Some CSV link for Super Jewels Quest",
                     "report": "Some report link for Super Jewels Ques",
@@ -43,7 +43,7 @@ class Tab extends React.Component {
                   {
                     "name": "Mancala Mix",
                     "region": "JP",
-                    "createdOn": 1591999244,
+                    "createdOn": 1592296644000,
                     "price": [90, 450, 800],
                     "csv": "Some CSV link for Mancala Mix",
                     "report": "Some report link for Mancala Mix",
