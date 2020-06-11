@@ -6,6 +6,18 @@
     box-sizing: border-box;   
 }
 
+.tab_icon_left {
+    position: absolute;
+    left: 0;
+    margin: 0 3rem;
+}
+
+.tab_icon_right {
+    position: absolute;
+    right: 0;
+    margin: 0 3rem;
+}
+
 .tab_title {
    font-weight: 700; 
    font-size: 4em;
@@ -53,6 +65,10 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.tab_campaign{
+    margin: 0 1rem;
+}
+
 
 .titlebar {
     background: #ececec;
@@ -74,7 +90,7 @@
 }
 
 .center-img-action {
-    margin: auto;
+    margin: auto 0;
 }
 
 .tab_column {
@@ -144,7 +160,13 @@ hr{
 
     .tab_title {
         font-size: 2em;
-     }
+        text-align: center;
+    }
+
+    .tab_campaign {
+        margin: 1rem 0;
+        max-width: 5rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -154,6 +176,14 @@ hr{
         width: 3rem;
     }
 
+    .row_img_tab_wrapper {
+        padding: 0 0 0 2rem;
+    }
+
+    .row_img_tab_wrapper {
+        padding: 0 0 0 2rem;
+    }
+
     .center-img-action {
         margin: 0 auto;
     }
@@ -168,7 +198,13 @@ hr{
 
     .tab_title {
         font-size: 2em;
-     }
+        text-align: center;
+    }
+
+    .tab_campaign {
+        margin: 1rem 0;
+        max-width: 5rem;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -178,6 +214,10 @@ hr{
         width: 3rem;
     }
 
+    .row_img_tab_wrapper {
+        padding: 0 0 0 2rem;
+    }
+
     .center-img-action {
         margin: 0 auto;
     }
@@ -192,5 +232,13 @@ hr{
 
     .tab_title {
         font-size: 2em;
-     }
+        text-align: center;
+    }
+
+    .tab_campaign {
+        margin: 1rem 0;
+        max-width: 5rem;
+    }
 }
+
+

@@ -1,10 +1,8 @@
 import React from 'react'
-import LocaleContext from '../contexts/locale'
 import TabData from './tabdata';
-import OptionModal from './modal';
-import randomNatural from 'random-natural';
+import TitleTabs from './titletab';
+import Modal from './modal';
 import { G1, G2, G3, G4, G5, G6, G7, G8 } from './image';
-import moment from 'moment'
 
 class Tab extends React.Component {
     constructor(props) {
@@ -13,8 +11,7 @@ class Tab extends React.Component {
             selectedOption: undefined,
             selectedPrice: undefined,
             campaigns: ['upcoming_events', 'live_events', 'past_events'],
-            current_campaign: 'past_events',
-            calender_show:  false,
+            current_campaign: 'upcoming_events',
             tabData: {
                 "data": [{
                     "name": "Test Whatsapp",
@@ -57,35 +54,50 @@ class Tab extends React.Component {
         }
         this.openTab = this.openTab.bind(this);
     }
-    
-    componentDidUpdate() {
-        this.parseData(this.state.tabData, this.state.current_campaign)
-    }
 
     openTab(campaign) {
         this.setState({current_campaign: campaign});
     }
 
-    opentest = (tab, timestamp, handlerCal, diff) => {
+    handleClearSelectedOption = () => {
+        this.setState(() => ({ selectedOption: undefined }));
+    }
+
+    handlePick = (tab) => {
+        this.setState(() => ({ selectedOption: tab }));
+    };
+
+    /* The function updates the timestamp in the original object once the new timestamp is selected by the user from the calender*/
+    handlePickCalender = (time, tab, handlerCal) => {
+        let convert_to_timestamp = `${time.month}/${time.day}/${time.year}`
+        let timestamp = new Date(convert_to_timestamp).getTime()
         var d1 = this.state.tabData.data;
         for (var i in d1) {
             if (d1[i].name == tab.name) {
                 d1[i].createdOn = timestamp;
-                break; //Stop this loop, we found it!
+                break; 
             }
             
         }
-            this.setState(() => ( { tabData: {"data": d1} }))
-            handlerCal()
+        this.setState(() => ( { tabData: {"data": d1} }))
+        handlerCal()
     }
 
+    /*
+    * The function parses the source object and divides them into live, past and upcoming campaigns
+    * Here I have taken time interval from 00:00  to 23:59 as one day
+    * ( time is not set by user only day can be set by user but it can be done easily. 
+    *   Due to time constraint not implemented the functionality as for now. ) 
+
+    */
     parseData({data}, currentTab){
-        var today = new Date();
-        const todayTimeStamp = today.setHours(0,0,0,0); 
-        const tomorrowTimeStamp = today.getTime() + (24 * 60 * 60 * 1000);
+        let today = new Date();
+        let todayTimeStamp = today.setHours(0,0,0,0); 
+        let tomorrowTimeStamp = today.getTime() + (24 * 60 * 60 * 1000);
         let upcoming_events_data = [];
         let past_events_data = [];
         let live_events_data = [];
+        
         data.forEach((value, index) => {
             if(value.createdOn < todayTimeStamp) {
                 past_events_data.push(value);
@@ -103,59 +115,15 @@ class Tab extends React.Component {
         } else {
             return past_events_data;
         }
-
-
      }
-
-    handleDeleteOptions = () => {
-        this.setState(() => ({ options: [] }));
-    };
-
-    handleClearSelectedOption = () => {
-        this.setState(() => ({ selectedOption: undefined }));
-    }
-
-    handlePick = (tab) => {
-        this.setState(() => ({
-            selectedOption: tab
-        }));
-    };
-
-
-    handlePickCalender = (time, tab, handlerCal) => {
-        console.log(" handlePickCalender -> ", time)
-        var convert_to_timestamp = `${time.month}/${time.day}/${time.year}`
-        var timestamp = new Date(convert_to_timestamp).getTime()
-        
-        this.opentest(tab, timestamp, handlerCal)
-    }
-    
 
     render() {
         return (
             <div className="wrapper">
                 <div className="tab_title">{(this.props.title).toUpperCase()}</div> 
-                <i className="fas fa-chevron-up"></i>
-                {/* <div className="tab" style={{overflowX: 'auto'}}>
-                    <button className={`tablinks ${this.state.current_campaign == 'upcoming_events' ? 'active' : ''}`} onClick={() => this.openTab('upcoming_events')} >Upcoming Campaigns</button>
-                    <button className={`tablinks ${this.state.current_campaign == 'live_events' ? 'active' : ''}`} onClick={() => this.openTab('live_events')}>Live Campaigns</button>
-                    <button className={`tablinks ${this.state.current_campaign == 'past_events' ? 'active' : ''}`} onClick={() => this.openTab('past_events')}>Past Campaigns</button>
-                </div> */}
-                <div >
-                    <div className="tab"  style={{overflowX: 'auto'}}>
-                        <div className="col-sm col-12">
-                            <button className={`tablinks ${this.state.current_campaign == 'upcoming_events' ? 'active' : ''}`} onClick={() => this.openTab('upcoming_events')}>Upcoming Campaigns</button>
-                        </div>
-                        <div className="col-sm col-12">
-                            <button className={`tablinks ${this.state.current_campaign == 'live_events' ? 'active' : ''}`} onClick={() => this.openTab('live_events')}>Live Campaigns</button>
-                        </div>
-                        <div className="col-sm col-12">
-                            <button className={`tablinks ${this.state.current_campaign == 'past_events' ? 'active' : ''}`} onClick={() => this.openTab('past_events')}>Past Campaigns</button>
-                        </div>
-                    </div>
-                </div>
+                <TitleTabs cc={this.state.current_campaign}  ot={this.openTab}/>
                 <TabData tabData={() => this.parseData(this.state.tabData, this.state.current_campaign)} handlePick={this.handlePick} handlePickCalender={this.handlePickCalender}/>
-                <OptionModal selectedOption={this.state.selectedOption} handleClearSelectedOption={this.handleClearSelectedOption} />
+                <Modal selectedOption={this.state.selectedOption} handleClearSelectedOption={this.handleClearSelectedOption} />
             </div>
         );
     }

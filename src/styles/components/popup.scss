@@ -11,7 +11,9 @@
   
   .ReactModalPortal .ReactModal__Overlay--after-open {
     opacity: 1;
+    z-index: 9999 !important;
   }
+  
   
   .ReactModalPortal .ReactModal__Overlay--before-close {
     opacity: 0;
@@ -19,11 +21,12 @@
   
 
 .popup {
-    color:#202741;
-    background: $white;
+    color: #202741;
+    background: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     outline: none;
-    padding: $l-size;
+    padding: 3.2rem;
+    margin: 3.2rem;
 }
 
 .popup_title {
@@ -48,10 +51,4 @@
     margin: 1rem 2rem;
   }
   
-//   .button--link {
-//     background: none;
-//     border: none;
-//     color: $off-white;
-//     padding: 0;
-//   }
-  
+

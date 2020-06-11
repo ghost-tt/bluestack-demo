@@ -10,7 +10,6 @@ const Flex = styled.div`
 `;
 
 const Popup = (props) => {
-    console.log(props)
     var format_selectedDate= `${props.selectedDay.month}/${props.selectedDay.day}/${props.selectedDay.year}`
     var timestamp = new Date(format_selectedDate).getTime()
     let formattedDate = moment.unix((timestamp/1000)).format("MMMM Do, YYYY")

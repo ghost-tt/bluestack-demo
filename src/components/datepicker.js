@@ -15,15 +15,12 @@ class DatePickerTab extends React.Component {
 
   setSelectedDay = (date) => {
     this.setState(() => ({ selectedDay: date , showPopup: !this.state.showPopup}))
-
-    // this.props.handlePickCalender(date, this.props.data, this.handlerCal)
   }
 
   createPopup = (response) => {
-      console.log("create poup -> ", response )
       if(response) {
         this.props.handlePickCalender(this.state.selectedDay, this.props.data, this.handlerCal)
-        this.setState(() => ( { showPopup: !this.state.showPopup } ))
+        this.setState(() => ( { showPopup: !this.state.showPopup, showCal: !this.state.showCal } ))
       } else {
         this.setState(() => ( { showPopup: !this.state.showPopup } ))
       }

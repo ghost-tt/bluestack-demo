@@ -18,13 +18,11 @@
 }
 
 .modal_pop {
-  color: $off-black;
-  background: $white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 30%;
-  height: 50%;
-  outline: none;
-  padding: $l-size;
+   color: #202741;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+    padding: 3.2rem;
 }
 
 .modal__title {
