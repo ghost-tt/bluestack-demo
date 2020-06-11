@@ -62,11 +62,18 @@ footer {
   }
 }
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1460px) {
   footer {
-    bottom: unset;
+    bottom: 0;
   }
 }
+
+@media screen and (max-width: 1366px) {
+  footer {
+    bottom: 0;
+  }
+}
+
 
 @media screen and (max-width: 1200px) {
   footer {
