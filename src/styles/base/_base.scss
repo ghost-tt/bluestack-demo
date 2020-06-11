@@ -54,22 +54,13 @@ body {
   
   /* Set black background color, white text and some padding */
   footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #20222b;
     color: white;
     padding: 2rem;
   }
-  
-  /* On small screens, set height to 'auto' for sidenav and grid */
-  @media screen and (max-width: 767px) {
-    .sidenav {
-      height: auto;
-      padding: 15px;
-    }
-    .row.content {height:auto;} 
-  }
-
- 
-
 
   .flex {
     display: flex !important;
@@ -78,3 +69,30 @@ body {
   .flex_grow {
     flex-grow: 1 !important;
   }
+
+
+
+
+  @media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    footer {
+      bottom: unset;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+    footer {
+      bottom: unset;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    /* It's possible to hide the image if the screen becomes too small */
+    footer {
+      bottom: unset;
+    }
+}
+

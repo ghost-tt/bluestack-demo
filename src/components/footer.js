@@ -7,7 +7,7 @@ const Footer = ({t}) => {
   const { locale } = React.useContext(LocaleContext)
   const name = 'Bluestack world'
   return (
-    <footer  style={{position: 'absolute', bottom: '0', width: '100%'}}>
+    <footer >
       <span style={{margin: '1rem'}}>{t('welcomeFooterMessage')}</span>
       <span  style={{margin: '1rem'}}>&copy; Bluestack{' '}</span>
     </footer>
