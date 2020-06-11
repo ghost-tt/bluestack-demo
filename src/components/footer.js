@@ -1,19 +1,17 @@
 import React from 'react'
 import LocaleContext from '../contexts/locale'
+import { translate } from 'react-polyglot'
 
-const Footer = () => {
+/* Language translation currently working on footer only. This can be done for all the components easily */
+const Footer = ({t}) => {
   const { locale } = React.useContext(LocaleContext)
-
+  const name = 'Bluestack world'
   return (
-    <footer>
-      &copy; Whenever.{' '}
-      <img
-        src={`/flags/${locale}.svg`}
-        alt={`Flag of ${locale}`}
-        width="15px"
-      />
+    <footer  style={{position: 'absolute', bottom: '0', width: '100%'}}>
+      <span style={{margin: '1rem'}}>{t('welcomeFooterMessage')}</span>
+      <span  style={{margin: '1rem'}}>&copy; Bluestack{' '}</span>
     </footer>
   )
 }
 
-export default Footer
+export default translate()(Footer)

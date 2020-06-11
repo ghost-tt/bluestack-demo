@@ -1,5 +1,0 @@
-{
-  "welcomeMessage": "Bienvenue, %{name}.",
-  "notification": "Vous avez %{smart_count} message. |||| Vous avez %{smart_count} messages.",
-  "title": "Gérer les campagnes"
-}

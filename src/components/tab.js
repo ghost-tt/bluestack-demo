@@ -14,9 +14,9 @@ class Tab extends React.Component {
             current_campaign: 'upcoming_events',
             tabData: {
                 "data": [{
-                    "name": "Test Whatsapp",
+                    "name": "Dragons",
                     "region": "US",
-                    "createdOn": 1559807714999,
+                    "createdOn": 1591778244000,
                     "price": [60, 300, 500],
                     "csv": "Some CSV link for Whatsapp",
                     "report": "Some report link for Whatsapp",
@@ -25,7 +25,7 @@ class Tab extends React.Component {
                   {
                     "name": "Super Jewels Quest",
                     "region": "CA, FR",
-                    "createdOn": 1559806715124,
+                    "createdOn": 159246944400,
                     "price": [80, 300, 800],
                     "csv": "Some CSV link for Super Jewels Quest",
                     "report": "Some report link for Super Jewels Ques",
@@ -34,7 +34,7 @@ class Tab extends React.Component {
                   {
                     "name": "Mole Slayer",
                     "region": "FR",
-                    "createdOn": 1591782156000,
+                    "createdOn": 1591864644000,
                     "price": [100, 500, 900],
                     "csv": "Some CSV link for Mole Slayer",
                     "report": "Some report link for Mole Slayer",
@@ -43,11 +43,46 @@ class Tab extends React.Component {
                   {
                     "name": "Mancala Mix",
                     "region": "JP",
-                    "createdOn": 1559806680124,
+                    "createdOn": 1591999244,
                     "price": [90, 450, 800],
                     "csv": "Some CSV link for Mancala Mix",
                     "report": "Some report link for Mancala Mix",
                     "image_url": G4
+                  },
+                  {
+                    "name": "Pubg",
+                    "region": "LP",
+                    "createdOn": 1591868244000,
+                    "price": [110, 450, 950],
+                    "csv": "Some CSV link for Pubg",
+                    "report": "Some report link for Pubg",
+                    "image_url": G5
+                  },
+                  {
+                    "name": "NFS",
+                    "region": "EU",
+                    "createdOn": 1592469444000,
+                    "price": [80, 300, 500],
+                    "csv": "Some CSV link for NFS",
+                    "report": "Some report link for NFS",
+                    "image_url": G6
+                  },{
+                    "name": "Shadow Fight",
+                    "region": "IN",
+                    "createdOn": 1591259844000,
+                    "price": [50, 250, 400],
+                    "csv": "Some CSV link for Shadow Fight",
+                    "report": "Some report link for Shadow Fight",
+                    "image_url": G7
+                  },
+                  {
+                    "name": "Angel Saver",
+                    "region": "US",
+                    "createdOn": 1591951044000,
+                    "price": [60, 250, 400],
+                    "csv": "Some CSV link for Angel Saver",
+                    "report": "Some report link for Angel Saver",
+                    "image_url": G8
                   }
                 ]
               }

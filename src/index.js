@@ -15,22 +15,42 @@ import Campaign from './components/campaign'
 
 const App = () => {
   const [locale, setLocale] = React.useState('en')
-  // In a real app, you should consider preloading default country
-  // or load it from the server.
   const [messages, setMessages] = React.useState({})
+
+  /* const [finalOut, setOut] = React.useState('')
+  const [datavalue, setDatValue] = React.useState({}) */
 
   React.useEffect(
     () => {
       async function fetchData() {
         const result = await axios.get(`/translations/${locale}.json`)
-        // In a real app, you should consider caching the results in an object.
-        // To prevent requests for same locale again.
         setMessages(result.data)
       }
       fetchData()
     },
     [locale]
   )
+
+
+  /* 
+    * Code for data.json file to get all the sample data used for parsing.
+    * As for now I am handing data as state as i was having no other option to set in a db and get a value due to time contraint
+  
+  */
+ /*  React.useEffect(
+    () => {
+      async function fetchData() {
+        const data_result = await axios.get(`/data/data.json`)
+        setDatValue(data_result.data)
+      }
+      fetchData()
+    },
+    [finalOut]
+  ) */
+
+
+  
+
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale }}>
@@ -39,7 +59,7 @@ const App = () => {
           <Header />
           <Campaign />
           {/* <Message name="CodeSandbox" messageCount={1} /> */}
-          {/* <Footer /> */}
+          <Footer />
         </Fragment>
       </I18n>
     </LocaleContext.Provider>

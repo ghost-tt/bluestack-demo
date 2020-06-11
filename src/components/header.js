@@ -14,7 +14,7 @@ const Header = (props) => {
           <div className="right">
             <select onChange={e => setLocale(e.target.value)} className="alignRight">
               <option value="en">English</option>
-              <option value="fr">French</option>
+              <option value="de">German</option>
             </select>
           </div>
         </div>

@@ -1,0 +1,39 @@
+{
+    "data": [{
+        "name": "Test Whatsapp",
+        "region": "US",
+        "createdOn": 1559807714999,
+        "price": [60, 300, 500],
+        "csv": "Some CSV link for Whatsapp",
+        "report": "Some report link for Whatsapp",
+        "image_url": "G1"
+      },
+      {
+        "name": "Super Jewels Quest",
+        "region": "CA, FR",
+        "createdOn": 1559806715124,
+        "price": [80, 300, 800],
+        "csv": "Some CSV link for Super Jewels Quest",
+        "report": "Some report link for Super Jewels Ques",
+        "image_url": "G2"
+      },
+      {
+        "name": "Mole Slayer",
+        "region": "FR",
+        "createdOn": 1591782156000,
+        "price": [100, 500, 900],
+        "csv": "Some CSV link for Mole Slayer",
+        "report": "Some report link for Mole Slayer",
+        "image_url": "G3"
+      },
+      {
+        "name": "Mancala Mix",
+        "region": "JP",
+        "createdOn": 1559806680124,
+        "price": [90, 450, 800],
+        "csv": "Some CSV link for Mancala Mix",
+        "report": "Some report link for Mancala Mix",
+        "image_url": "G4"
+      }
+    ]
+}
