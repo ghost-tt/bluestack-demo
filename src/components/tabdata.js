@@ -55,7 +55,7 @@ const renderTableData = (data, handlePick, handlePickCalender) => {
                     </div>
                 </FlexGrow>
                 <FlexGrow fb={'20%'} onClick={() => handlePick(tab)} >
-                    <div className="flex row_img_tab_wrapper">
+                    <div className="flex cursor row_img_tab_wrapper">
                         <img src={PriceImg} className="row_img_tab img-responsive-price"/>
                         <p className="d-none d-md-block" style={{margin: 'auto 1rem'}}>view pricing</p>
                     </div>

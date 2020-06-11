@@ -33,7 +33,7 @@ class DatePickerTab extends React.Component {
   render() {
     return (
       <div>
-        <div className="flex" onClick={this.handlerCal} style={{flexBasis: "33.3%"}}>
+        <div className="flex cursor" onClick={this.handlerCal} style={{flexBasis: "33.3%"}}>
             <img src={this.props.Image} style={{width: '15%'}} className="row_img_tab_action img-responsive"/>
             <p className="d-none d-md-block" style={{margin: 'auto 1rem'}}>schedule again</p>
         </div>

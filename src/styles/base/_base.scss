@@ -1,10 +1,10 @@
 html {
-    font-size: 62.5%;
-    height: 100%;
-    position: relative;
+  font-size: 62.5%;
+  height: 100%;
+  position: relative;
 }
 
-*{
+* {
   box-sizing: border-box;
   outline-width: thin;
   margin: 0;
@@ -16,107 +16,89 @@ p {
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button:disabled {
-    cursor: default;
+  cursor: default;
 }
 
-
 body {
-    height: 100%;
-    background-color: $white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: $s-size;
+  height: 100%;
+  background-color: $white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $s-size;
 }
 
 .is-active {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
 
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-.navbar {
-    margin-bottom: 0;
-    border-radius: 0;
-  }
-  
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  .row.content {height: 450px}
-  
-  /* Set gray background color and 100% height */
-  .sidenav {
-    padding-top: 20px;
-    background-color: #f1f1f1;
-    height: 100%;
-  }
-  
-  /* Set black background color, white text and some padding */
+.cursor {
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #20222b;
+  color: white;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex_grow {
+  flex-grow: 1 !important;
+}
+
+@media screen and (max-width: 2560px) {
   footer {
-    position: absolute;
     bottom: 0;
-    width: 100%;
-    background-color: #20222b;
-    color: white;
-    padding: 2rem;
   }
+}
 
-  .flex {
-    display: flex !important;
+@media screen and (max-width: 1800px) {
+  footer {
+    bottom: unset;
   }
+}
 
-  .flex_grow {
-    flex-grow: 1 !important;
+@media screen and (max-width: 1200px) {
+  footer {
+    bottom: 0;
   }
+}
 
-  @media screen and (max-width: 2560px) {
-    footer {
-      bottom: 0;
-    }
+@media screen and (max-width: 1028px) {
+  footer {
+    bottom: unset;
   }
+}
 
-  @media screen and (max-width: 1800px) {
-    footer {
-      bottom: unset;
-    }
+@media screen and (max-width: 991px) {
+  /* start of large tablet styles */
+  footer {
+    bottom: unset;
   }
+}
 
-  
-
-  @media screen and (max-width: 1200px) {
-    footer {
-      bottom: 0;
-    }
+@media screen and (max-width: 767px) {
+  /* start of medium tablet styles */
+  /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+  footer {
+    bottom: unset;
   }
+}
 
-  @media screen and (max-width: 1028px) {
-    footer {
-      bottom: unset ;
-    }
+@media screen and (max-width: 479px) {
+  /* start of phone styles */
+  /* It's possible to hide the image if the screen becomes too small */
+  footer {
+    bottom: unset;
   }
-
-  @media screen and (max-width: 991px) {
-    /* start of large tablet styles */
-    footer {
-      bottom: unset;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-      /* start of medium tablet styles */
-      /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
-      footer {
-        bottom: unset;
-      }
-  }
-
-  @media screen and (max-width: 479px) {
-      /* start of phone styles */
-      /* It's possible to hide the image if the screen becomes too small */
-      footer {
-        bottom: unset;
-      }
-  }
-
- 
+}
